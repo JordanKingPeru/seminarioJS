@@ -123,7 +123,6 @@ export default class UserPage extends React.Component
                     < div style={{float:"left" , width:"30%"}} >
                         < h1 > UserPage < /h1> <br />
                         < input id = "fileInput" type = "file" onChange = { this.handleUploadToTrainFiles } accept=".csv"/> <br />
-                        < input id = "fileInput" type = "file" onChange = { this.handleUploadToPredictFiles } accept=".csv"/> <br />
                         < button onClick = { this.handleLogout } >Logout </button > <br /> 
                     </ div >
                     < div style={{float:"right" , width:"60%"}}>
