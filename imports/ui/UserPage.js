@@ -1,6 +1,10 @@
 import React from 'react';
 import FileHandler from '../api/FileHandler.js'
 import VisualizationFrame from './VisualizationFrame.js'
+
+state={};
+state.message="Upload To Server";
+
 export default class UserPage extends React.Component
 {
     handleUploadToTrainFiles(e)
@@ -43,11 +47,11 @@ export default class UserPage extends React.Component
                     {
                         if( err )
                         {
-                            console.log( err );
+                            state.message = "Broken connection with Server";
                         }
                         else
                         {
-                            console.log( res );
+                            state.message = "Training started";
                         }
                     });
                 }
@@ -123,7 +127,7 @@ export default class UserPage extends React.Component
                         < button onClick = { this.handleLogout } >Logout </button > <br /> 
                     </ div >
                     < div style={{float:"right" , width:"60%"}}>
-                        < VisualizationFrame />
+                        < VisualizationFrame {...state}/>
                     </ div >
                 </ div > );
     }

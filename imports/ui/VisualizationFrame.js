@@ -3,11 +3,16 @@ import VisualizationPlot from './VisualizationPlot.js'
 
 export default class VisualizationFrame extends React.Component
 {
+
+    constructor(props) 
+    {
+        super(props);
+    }
     render()
     {
         return (< div >
-                    < h1 > UserPage < /h1> <br />
-                    < VisualizationPlot />
+                    < h1 > {this.props.message} < /h1> <br />
+                    < VisualizationPlot/>
                 </ div > );
     }
 }
